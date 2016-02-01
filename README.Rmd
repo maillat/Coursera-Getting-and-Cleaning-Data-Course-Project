@@ -26,6 +26,7 @@ The project deliverables included in this repo include:
 * run_analysis.R 
     * R-scripts for performing the analysis
         * Merges the testing and training datasets
+        * Subsets the dataset to include only mean and standard deviation observations
         * Adds labels for variables kept
 * tidy.txt
     * The tidy dataset produced by this analysis
