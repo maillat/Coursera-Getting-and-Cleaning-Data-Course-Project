@@ -73,9 +73,86 @@ The script run_analysis.R runs the 5 steps described in the course project instr
 * In Step 5, the mean for each column except subject and activityname was determined, and the final table was written to the working directory as a text file.
 
 
+###Final Dataset
+The following variables are included in the final dataset:
 
+* Subject ID and Activity Label
+    * subject - The ID of the test subject
+    * activity labels
+        * WALKING (value 1): subject was walking during the test
+        * WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+        * WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+        * SITTING (value 4): subject was sitting during the test
+        * STANDING (value 5): subject was standing during the test
+        * LAYING (value 6): subject was laying down during the test
 
-
+* List of Measurements - Mean Values included for each variable:
+    * timebodyaccelerometer-MEAN()-x 
+    * timebodyaccelerometer-MEAN()-y
+    * timebodyaccelerometer-MEAN()-z  
+    * timebodyaccelerometer-SD()-x  
+    * timebodyaccelerometer-SD()-y      
+    * timebodyaccelerometer-SD()-z  
+    * timegravityaccelerometer-MEAN()-x 
+    * timegravityaccelerometer-MEAN()-y      
+    * timegravityaccelerometer-MEAN()-z     
+    * timegravityaccelerometer-SD()-x     
+    * timegravityaccelerometer-SD()-y       
+    * timegravityaccelerometer-SD()-z     
+    * timebodyaccelerometerjerk-MEAN()-x      
+    * timebodyaccelerometerjerk-MEAN()-y       
+    * timebodyaccelerometerjerk-MEAN()-z    
+    * timebodyaccelerometerjerk-SD()-x      
+    * timebodyaccelerometerjerk-SD()-y      
+    * timebodyaccelerometerjerk-SD()-z         
+    * timebodygyroscope-MEAN()-x          
+    * timebodygyroscope-MEAN()-y         
+    * timebodygyroscope-MEAN()-z                
+    * timebodygyroscope-SD()-x              
+    * timebodygyroscope-SD()-y           
+    * timebodygyroscope-SD()-z             
+    * timebodygyroscopejerk-MEAN()-x       
+    * timebodygyroscopejerk-MEAN()-y       
+    * timebodygyroscopejerk-MEAN()-z         
+    * timebodygyroscopejerk-SD()-x          
+    * timebodygyroscopejerk-SD()-y           
+    * timebodygyroscopejerk-SD()-z          
+    * timebodyaccelerometermagnitude-MEAN()      
+    * timebodyaccelerometermagnitude-SD()     
+    * timegravityaccelerometermagnitude-MEAN()   
+    * timegravityaccelerometermagnitude-SD()      
+    * timebodyaccelerometerjerkmagnitude-MEAN()   
+    * timebodyaccelerometerjerkmagnitude-SD()     
+    * timebodygyroscopemagnitude-MEAN()       
+    * timebodygyroscopemagnitude-SD()        
+    * timebodygyroscopejerkmagnitude-MEAN()        
+    * timebodygyroscopejerkmagnitude-SD()   
+    * frequencybodyaccelerometer-MEAN()-x      
+    * frequencybodyaccelerometer-MEAN()-y     
+    * frequencybodyaccelerometer-MEAN()-z    
+    * frequencybodyaccelerometer-SD()-x          
+    * frequencybodyaccelerometer-SD()-y        
+    * frequencybodyaccelerometer-SD()-z     
+    * frequencybodyaccelerometerjerk-MEAN()-x   
+    * frequencybodyaccelerometerjerk-MEAN()-y    
+    * frequencybodyaccelerometerjerk-MEAN()-z       
+    * frequencybodyaccelerometerjerk-SD()-x       
+    * frequencybodyaccelerometerjerk-SD()-y         
+    * frequencybodyaccelerometerjerk-SD()-z       
+    * frequencybodygyroscope-MEAN()-x          
+    * frequencybodygyroscope-MEAN()-y            
+    * frequencybodygyroscope-MEAN()-z           
+    * frequencybodygyroscope-SD()-x           
+    * frequencybodygyroscope-SD()-y         
+    * frequencybodygyroscope-SD()-z          
+    * frequencybodyaccelerometermagnitude-MEAN()   
+    * frequencybodyaccelerometermagnitude-SD()   
+    * frequencybodyaccelerometerjerkmagnitude-MEAN(
+    * frequencybodyaccelerometerjerkmagnitude-SD() 
+    * frequencybodygyroscopemagnitude-MEAN()    
+    * frequencybodygyroscopemagnitude-SD()     
+    * frequencybodygyroscopejerkmagnitude-MEAN()  
+    * frequencybodygyroscopejerkmagnitude-SD()   
 
 
 
