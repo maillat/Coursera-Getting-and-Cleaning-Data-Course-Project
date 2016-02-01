@@ -1,0 +1,34 @@
+---
+title: "README.md"
+author: "ATM-A Coursera Student"
+date: "January 31, 2016"
+output: html_document
+---
+
+## Getting and Cleaning Data: Course Project
+
+###Executive Summary
+
+This repository contains the R code and supportive documentation for the Coursera/Johns Hopkins 'Getting and Cleaing Data' module course project. This course project involves documenting the steps for transforming a messy data set into a tidy data set that's ready for analysis.  
+
+###Summary of Source Data
+The data for this project was collected by a group of Italian researchers who are interested in predicting movements of human subjects. Data was collected on 30 adult study subjects who were wearing a Samsung cell phone with software that tracks 6 different types of movement (walking, walking upstairs, walking downstairs, sitting, standing, and laying). The data collected was partitioned into two sets, where 70% of subjects were selected to generate a training dataset and 30% were selected to generate the test data. A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+###Project Deliverables
+The project deliverables included in this repo include:
+
+* This README.md document
+* CodeBook.md
+    * Document that describes the variables of interest and how they are transformed from messy to tidy
+    * Variables of interest kept for this course project are the mean and standard deviation
+* run_analysis.R 
+    * R-scripts for performing the analysis
+        * Merges the testing and training datasets
+        * Adds labels for variables kept
+* tidy.txt
+    * The tidy dataset produced by this analysis
+
+
+

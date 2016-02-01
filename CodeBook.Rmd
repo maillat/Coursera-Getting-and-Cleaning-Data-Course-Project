@@ -1,0 +1,88 @@
+---
+title: "Code Book"
+author: "ATM - A Coursers Student"
+date: "January 31, 2016"
+output: html_document
+---
+
+###Data Source
+The source data and full description is available at the following site:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Files were downloaded on Sunday, January 31, 2016.
+
+###Files included with Dataset
+
+* 'README.txt'
+* 'features_info.txt': Shows information about the variables used on the feature vector
+* 'features.txt': List of all features.
+* 'activity_labels.txt': Links the class labels with their activity name.
+* 'train/X_train.txt': Training set.
+* 'train/y_train.txt': Training labels.
+* 'test/X_test.txt': Test set.
+- 'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent. 
+
+* 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+* 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+* 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+* 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+
+###Documentation Review 
+The following comments were excerpted from the following text files which reviewed manually via a text editor and not loaded into R)
+
+  * README.txt
+  * features_info.txt
+
+For each record it is provided:
+  
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+Describes how signals from software are transformed into the 561 feature vectors
+
+* There are 10 time-related features
+    * 5 of these have x-, y-, and z-related features = 15 features
+    * 5 remaining variables have single features
+    * Total time-related features = 20
+* There are 7 frequency-related features derived from Fast Fourier Transformation of some of the above features
+    * 3 have x-, y-, and z-related features = 9 features
+    * 4 remaining variables have single features
+    * Total frequent-related features = 13
+* All 33 of these features were transformed into 17 summary variables each = 561 measurements total for the dataset
+    * Example summary transformations include mean, standard deviation, min, max, etc
+
+####For this project we are interested in including only the mean and standard deviation in the final tidy dataset.
+
+
+###Processing of Data
+The script run_analysis.R runs the 5 steps described in the course project instructions. 
+
+* In Step 1 after the data files were loaded into R, rbind() was used to merge the test, training and subject datasets, respectively.  
+    * Each of the column names were updated to descriptive names provided by the training labels tables provided in the dataset.  
+    * Then the test, training and subject datasets were merged into one data table
+* In Step 2, the dataset was subsetted to include only mean and standard deviation observations. This was accomplished using the name of the features by select substrings that included 'mean' or 'std' with wildcards before and after the search string, and only including records with matching feature names in the data table.
+* In Step 3, the activity labels were then merged into the table by joining on activityNum, which was in both the activityLabels and single data table
+* In step 4, column names were made all lower case and commonly used abbreviations in the final data set were updated with full column names.  Since the column subject was an int datatype, it was changed to be a factor datatype.
+* In Step 5, the mean for each column except subject and activityname was determined, and the final table was written to the working directory as a text file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
